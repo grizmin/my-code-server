@@ -20,7 +20,7 @@
   <ReadMe>https://github.com/grizmin/my-code-server</ReadMe>
   <Registry></Registry>
   <GitHub>https://github.com/grizmin/my-code-server</GitHub>
-  <Repository>private/vscode-copilot</Repository>
+  <Repository>grizmin/vscode-copilot</Repository>
   <Project></Project>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -60,7 +60,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>https://[IP]:[PORT:8500]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8586]/</WebUI>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/code-server-icon.png</Icon>
   <DonateText>If you appreciate my work, then please consider buying me a beer :D</DonateText>
