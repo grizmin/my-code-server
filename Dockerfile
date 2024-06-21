@@ -36,7 +36,7 @@ RUN apt-get -y install sudo -y \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 # Create a non-root user
-RUN useradd -m vscodeuser
+RUN useradd -m vscodeuser -s /bin/bash -G nobody,sudo -u 99
 
 # Switch to the non-root user
 USER vscodeuser
@@ -45,7 +45,7 @@ USER vscodeuser
 ENV HOME /home/vscodeuser
 
 # Install the GitHub Copilot extension
-RUN code --install-extension GitHub.copilot-chat
+# RUN code --install-extension GitHub.copilot-chat
 
 # Expose the port for VS Code
 EXPOSE $VSCODE_PORT
