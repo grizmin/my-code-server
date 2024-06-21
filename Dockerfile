@@ -43,6 +43,9 @@ USER vscodeuser
 # Set the home directory for the non-root user
 ENV HOME /home/vscodeuser
 
+# Install the GitHub Copilot extension
+RUN code --install-extension GitHub.copilot-chat
+
 # Expose the port for VS Code
 EXPOSE $VSCODE_PORT
 
