@@ -50,11 +50,6 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/vscode-copilot/extensions</HostDir>
-      <ContainerDir>/config/extensions</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/mnt/user/appdata/vscode-copilot/data</HostDir>
       <ContainerDir>/home/vscodeuser</ContainerDir>
       <Mode>rw</Mode>
