@@ -6,7 +6,7 @@ ENV VSC_CONNECTION_TOKEN=my_default_token
 ENV VSCODE_PORT=8586
 ENV ROOT_PASSWORD=toor
 
-# Set the root password for the IDE system
+# Set the root password for the IDE system; Make sure to change this to a secure password if you are exposing this container to the internet
 RUN echo "root:${ROOT_PASSWORD}" | chpasswd
 
 # Install necessary packages
