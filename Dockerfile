@@ -36,7 +36,7 @@ RUN apt-get -y install sudo -y \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 # Create a non-root user
-RUN useradd -m vscodeuser -s /bin/bash -G nobody,sudo -u 99
+RUN useradd -m vscodeuser -s /bin/bash -G users,sudo -u 99
 
 # Switch to the non-root user
 USER vscodeuser
