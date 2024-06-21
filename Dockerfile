@@ -4,9 +4,10 @@ FROM ubuntu:latest
 # Set Visual Studio Code connection token
 ENV VSC_CONNECTION_TOKEN=my_default_token
 ENV VSCODE_PORT=8586
+ENV ROOT_PASSWORD=toor
 
 # Set the root password for the IDE system
-RUN echo 'root:<root_password>' | chpasswd
+RUN echo "root:${ROOT_PASSWORD}" | chpasswd
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y software-properties-common apt-transport-https wget && \
