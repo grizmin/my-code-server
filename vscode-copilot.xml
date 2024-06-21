@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/grizmin/my-code-server/master/vscode-copilot.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Productivity: Tools:Utilities</Category>
+  <Name>vscode-copilot</Name>
+  <Description>
+    [b]Description[/b][br]
+    Code-server is a Visual Studio Code instance running on a remote server accessible through any web browser. It allows you to code anywhere and on any device such as a tablet or laptop with a consistent integrated development environment (IDE). Set up a secure a Linux development machine and get coding on any device with a web browser. Take advantage of a cloud server by offloading the system demanding tasks such as tests, compilations, downloads to another machine. Preserve battery life when you’re on the go or spend your downtime doing something else while the computationally intensive processes are running on your cloud server.[br][br]
+    [b]Configuration[/b][br]
+    [b]/config[/b] This is where the application will store its configuration files, database and logs etc.[br]
+    [b]/data[/b] This path is used to store source code.[br][br]
+    [b]Documentation[/b][br]
+    https://github.com/binhex/documentation[br][br]
+  </Description>
+  <Overview>
+    Code-server is a Microsoft's Visual Studio Code instance running on a remote server accessible through any web browser. 
+  </Overview>
+  <Support></Support>
+  <ReadMe>https://github.com/grizmin/my-code-server</ReadMe>
+  <Registry></Registry>
+  <GitHub>https://github.com/grizmin/my-code-server</GitHub>
+  <Repository>private/vscode-copilot</Repository>
+  <Project></Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8586</HostPort>
+        <ContainerPort>8586</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ROOT_PASSWORD</Name>
+      <Value>toor</Value>
+    </Variable>
+    <Variable>
+        <Name>VSCODE_CONNECTION_TOKEN</Name>
+        <Value>my-default-token</Value>
+    </Variable>
+    <Variable>
+        <Name>VSCODE_PORT</Name>
+        <Value>8586</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vscode-copilot/extensions</HostDir>
+      <ContainerDir>/config/extensions</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vscode-copilot/data</HostDir>
+      <ContainerDir>/home/vscodeuser</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://[IP]:[PORT:8500]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/code-server-icon.png</Icon>
+  <DonateText>If you appreciate my work, then please consider buying me a beer :D</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=MM5E27UX6AUU4</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <ExtraParams></ExtraParams>
+</Containers>
