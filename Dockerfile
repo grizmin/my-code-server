@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Set Visual Studio Code connection token
-ENV VSC_CONNECTION_TOKEN=my_default_token
+ENV VSCODE_CONNECTION_TOKEN=my_default_token
 ENV VSCODE_PORT=8586
 ENV ROOT_PASSWORD=toor
 
@@ -51,4 +51,4 @@ RUN code --install-extension GitHub.copilot-chat
 EXPOSE $VSCODE_PORT
 
 # Start Visual Studio Code on port 8585 from anywhere (0.0.0.0)
-CMD code serve-web --host 0.0.0.0 --port $VSCODE_PORT --user-data-dir /home/vscodeuser --accept-server-license-terms --connection-token $VSC_CONNECTION_TOKEN
+CMD code serve-web --host 0.0.0.0 --port $VSCODE_PORT --user-data-dir /home/vscodeuser --accept-server-license-terms --connection-token $VSCODE_CONNECTION_TOKEN
